@@ -5,8 +5,10 @@
   <title>D3CODING THE EVOLUTION</title>
 
   <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="graph.css">
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script src="functions.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="JS/main.js"></script>
 </head>
 
 <body>
@@ -21,20 +23,42 @@
     </div>
 
     <div class="menu">
-      <a id="link1" class="link" href="index.html">HOME</a>
-      <a id="link2" class="link" href="research.html">RESEARCH</a>
-      <a id="link3" class="link" href="about.html">ABOUT</a>
-      <a id="link4" class="link" href="contact.html">CONTACT</a>
+      <a id="link1" class="link" href="index.html">HOME<sup> 00</sup></a>
+      <a id="link2" class="link" href="research.html">RESEARCH<sup> 01</sup></a>
+      <a id="link3" class="link" href="about.html">ABOUT<sup> 02</sup></a>
+      <a id="link4" class="link" href="contact.html">CONTACT<sup> 03</sup></a>
     </div>
   </div>
 
-  <div class="headImg"></div>
+  <div class="headImg RESEARCH"></div>
 
-  <p>*data visualization to be added</p>
+  <button class="tablink" onclick="openData('human', this)">Human</button>
+  <button class="tablink" onclick="openData('next', this)">What's Next?</button>
+
+  <div id="human" class="tabContent">
+    <div class="dataHead">Size</div>
+    <svg class="size"></svg>
+
+    <div class="dataHead">Facial/Cranial Features</div>
+    <svg class="facial-feature"></svg>
+
+    <div class="dataHead">Body Structure</div>
+    <svg class="body-structure"></svg>
+
+    <div class="dataHead">Evolution Progress</div>
+    <svg class="movement"></svg>
+  </div>
+
+  <div id="next" class="tabContent">
+    <div class="next">More research coming soon!</div>
+  </div>
 
   <div class="footer">
-    <p class="f-left">D3CODING THE EVOLUTION <br/> Website by Anthony Kim</p>
-    <p class="f-right"><a href="https://github.com/createandbuild">View Source Code</a><br/><a href="https://github.com/createandbuild">View Data</a></p>
+    <p class="f-left">D3CODING THE EVOLUTION<br/>Website by Anthony Kim</p>
+    <p class="f-right"><a href="https://github.com/createandbuild/D3CODING-THE-EVOLUTION">View Source Code</a><br/><a href="https://github.com/createandbuild/D3CODING-THE-EVOLUTION/tree/master/assets/data">View Data</a></p>
   </div>
+
+  <script src="JS/components/size.js"></script>
+  <script src="JS/components/movement.js"></script> <!--only the last graph is showing, even when combined to one js file-->
 </body>
 </html>

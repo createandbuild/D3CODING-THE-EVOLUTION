@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #FCFCFC;
+  color: #333333;
   cursor: default;
 }
 
@@ -20,20 +21,18 @@ body {
 }
 
 @font-face {
-  font-family: "libre-baskerville"
-  src: url("assets/fonts/LibreBaskerville-Regular.otf");
+  font-family: "open-sans";
+  src: url("assets/fonts/OpenSans-Regular.ttf");
 }
 
 @font-face {
-  font-family: "libre-baskerville"
-  src: url("assets/fonts/LibreBaskerville-Bold.otf");
-  font-weight: bold;
+  font-family: "open-sans-light";
+  src: url("assets/fonts/OpenSans-Light.ttf");
 }
 
 @font-face {
-  font-family: "libre-baskerville"
-  src: url("assets/fonts/LibreBaskerville-Italic.otf");
-  font-style: italic;
+  font-family: "open-sans-bold";
+  src: url("assets/fonts/OpenSans-Bold.ttf");
 }
 
 @import 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css';
@@ -50,9 +49,9 @@ a:hover {
 
 .mainBar {
   position: fixed;
-  background: #333333;
   height: 40px;
   width: 100%;
+  transition: background-color 0.5s;
 }
 
 .mainBar img {
@@ -64,7 +63,7 @@ a:hover {
   transform: translateY(-50%);
   position: relative;
 
-  z-index: 3;
+  z-index: 13;
 }
 
 .mainTxt {
@@ -76,11 +75,11 @@ a:hover {
   position: absolute;
   margin: auto;
   top: 30%;
-  left: 40vw;
+  left: 42vw;
   width: 300px;
   height: 35px;
 
-  z-index: 3;
+  z-index: 13;
 }
 
 .menuBar {
@@ -89,12 +88,12 @@ a:hover {
   right: 5px;
   width: 40px;
   height: 20px;
-  padding: 4px 8px;
+  padding: 4px 7px;
   background: inherit;
   box-sizing: border-box;
   cursor: pointer;
 
-  z-index: 3;
+  z-index: 13;
 }
 
 .menuBar span {
@@ -137,7 +136,7 @@ a:hover {
   display: flex;
   justify-content: space-evenly;
 
-  z-index: 2;
+  z-index: 10;
 }
 
 .menu.active {
@@ -145,7 +144,7 @@ a:hover {
   z-index: 2;
 }
 
-.menu .link { /*change padding so it's contained*/
+.menu .link {
   display: inline-block;
   text-align: center;
   color: white;
@@ -166,85 +165,178 @@ a:hover {
 }
 
 .headImg {
-  background-image: url("assets/graphics/robotEvolution.png");
   height: 100vh;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.HOME {
+  background-image: url("assets/graphics/evolution.jpg");
+}
+
+.RESEARCH {
+  background-image: url("assets/graphics/daVinciSketch.jpg");
+}
+
+.ABOUT {
+  background-image: url("assets/graphics/about.jpg");  /*have text "about"*/
+}
+
+.CONTACT {
+  background-image: url("assets/graphics/PA.jpg");
+}
+
 .head {
-  font-family: libre-baskerville;
+  font-family: open-sans-bold;
   font-size: 30px;
-  font-weight: bold;
 }
 
 .description {
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  display: flex;
+  align-items: center;
 }
 
-.description .head {
-  margin-left: 50%;
+.description img{
+  display: inline-block;
+  height: auto;
+  width: 550px;
+  margin-left: 100px;
+
+  z-index: -1;
+}
+
+.text {
+  display: inline-block;
+  margin-left: 100px;
+  text-align: justify;
 }
 
 .desTxt {
-  font-family: libre-baskerville;
-  font-size: 25px;
-  margin-left: 50%;
+  font-family: open-sans-light;
+  font-size: 22px;
+  margin-left: 40px;
+  width: 625px;
+  display: inline-block;
+}
+
+.tablink {
+  background-color: #555555;
+  color: #FCFCFC;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: gotham-bold;
+  font-size: 20px;
   width: 50%;
-  display: inline-block;
+  height: 45px;
+  margin-bottom: 50px;
 }
 
-.description img {
-  display: inline-block;
+.tablink:hover {
+  background-color: #D64541;
+}
+
+
+.tabContent {
+  color: #333333;
+  background-color: #FCFCFC;
   margin-left: 50px;
-  width: 500px;
-  height: auto;
+  display: none;
+  height: 100%;
 }
 
-.desImg .bottom {
-  top: 50px;
-  left: 100px;
-  z-index: 1;
-}
-
-.desImg .top {
-
-  z-index: 3;
-}
-
-.head {
-  font-family: libre-baskerville;
+.dataHead {
+  font-family: gotham-bold;
   font-size: 30px;
-  font-weight: bold;
+}
+
+.tabContent svg {
+  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-left: 110px;
+}
+
+.next {
+  font-family: gotham-bold;
+  font-size: 30px;
+  margin-bottom: 50px;
 }
 
 .about {
-  text-align: center;
+  margin-left: 150px;
+}
+
+.about .head {
+  margin-bottom: 15px;
+}
+
+.about p {
+  display: block;
+  text-align: justify;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  width: 80%;
+  font-family: open-sans-light;
+  font-weight: bold;
+}
+
+.about a {
+  display: block;
+  text-align: justify;
+  margin-left: 50px;
+  padding: 5px;
+  width: 45%;
+  font-family: open-sans-light;
+  font-weight: bold;
 }
 
 .contact {
+  margin-top: 150px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+
+  z-index: 2;
+}
+
+.contact img{
+  display: inline-block;
+  height: 300px;
+  margin-left: 200px;
+}
+
+.contact .info{
+  display: inline-block;
+  margin-left: 100px;
   text-align: center;
 }
 
-.contact img {
-  display: inline-block;
-  margin-bottom: auto;
-  width: auto;
-  height: 200px;
-}
-
-.contact #address{
-  font-family: libre-baskerville;
-  font-size: 25px;
+.contact #address {
+  padding: 5px;
+  font-family: open-sans-light;
+  font-size: 30px;
+  margin-bottom: 40px;
 }
 
 .contact #email {
-  /* width: 200px;
-  height: 50px; */
-  /* text-align: center; */
-  /* background-color: #D64541; */
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #D64541;
+  font-family: gotham-bold;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact #email:hover {
+  background-color: #446CB3;
+  color: white;
 }
 
 .footer {
@@ -265,12 +357,12 @@ a:hover {
   margin-left: 15px;
   display: inline-block;
   text-align: left;
-  width: 300px;
+  width: 350px;
 }
 
 .footer .f-right {
   margin-right: 15px;
-  width: calc(100% - 300px - 35px);
+  width: calc(100% - 350px - 35px);
   display: inline-block;
   text-align: right;
 }

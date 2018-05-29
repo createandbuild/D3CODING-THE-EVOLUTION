@@ -1,0 +1,9 @@
+.bar {
+  fill: #26A65B;
+}
+
+.line {
+  stroke: #4183D7;
+  stroke-width: 2px;
+  fill: none;
+}
