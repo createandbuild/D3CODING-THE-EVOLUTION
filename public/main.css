@@ -252,13 +252,13 @@ a:hover {
 
 .dataHead {
   font-family: gotham-bold;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .tabContent svg {
   margin-bottom: 50px;
-  margin-top: 20px;
-  margin-left: 110px;
+  margin-top: 40px;
+  margin-left: 100px;
 }
 
 .next {

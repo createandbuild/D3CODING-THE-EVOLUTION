@@ -1,9 +1,56 @@
-.bar {
-  fill: #26A65B;
+@font-face {
+  font-family: "gotham-light";
+  src: url("assets/fonts/Gotham-Light.otf");
 }
 
-.line {
+.label {
+  font-family: gotham-light;
+}
+
+.line1a {
   stroke: #4183D7;
-  stroke-width: 2px;
+  stroke-width: 3px;
+  fill: none;
+}
+
+.line1b {
+  stroke: #3A539B;
+  stroke-width: 3px;
+  fill: none;
+}
+
+.line2a {
+  stroke: #1E824C;
+  stroke-width: 3px;
+  fill: none;
+}
+
+.line2b {
+  stroke: #2ECC71;
+  stroke-width: 3px;
+  fill: none;
+}
+
+.line3a {
+  stroke: #9A12B3;
+  stroke-width: 3px;
+  fill: none;
+}
+
+.line3b {
+  stroke: #E08283;
+  stroke-width: 3px;
+  fill: none;
+}
+
+.line4a {
+  stroke: #F4D03F;
+  stroke-width: 3px;
+  fill: none;
+}
+
+.line4b {
+  stroke: #E67E22;
+  stroke-width: 3px;
   fill: none;
 }
